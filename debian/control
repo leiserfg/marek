@@ -1,0 +1,19 @@
+Source: marek
+Section: python
+Priority: optional
+X-Python-Version: >= 2.6
+Maintainer: Anton Berezin <gurunars@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~),
+               python-setuptools,
+               python (>= 2.6)
+Standards-Version: 3.9.1
+
+
+Package: marek
+Architecture: all
+Depends: ${python:Depends},
+         ${misc:Depends},
+         python (>= 2.6),
+         python-argparse,
+         python-jinja2
+Description: Tool to create projects from a template

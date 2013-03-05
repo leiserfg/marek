@@ -1,0 +1,16 @@
+Source: {{deb_name}}
+Section: misc
+Priority: optional
+Maintainer: {{deb_maintainer}} <{{deb_email}}>
+Build-Depends: debhelper (>= 8)
+Standards-Version: 3.8.4
+
+
+Package: {{deb_name}}
+Architecture: all
+Depends: ${python:Depends},
+         ${misc:Depends}
+Description: {{deb_description}}
+
+
+{% block extra %}{% endblock %}

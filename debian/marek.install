@@ -1,0 +1,2 @@
+templates/*              /usr/share/marek/
+bash_completion/marek    /etc/bash_completion.d/

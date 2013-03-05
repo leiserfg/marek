@@ -1,0 +1,21 @@
+_marek() {
+    templates=`marek --list-plain`
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    uncompletable="-l --list --list-plain --help"
+
+    if [ "${cur:0:1}" == "-" ]; then
+        COMPREPLY=( $(compgen -W "$uncompletable -q" -- ${cur}) )
+        return 0
+    fi
+
+    if [ "${prev:0:1}" == "-" -a "${prev}" != "-q" ]; then
+        COMPREPLY=()
+        return 0
+    fi
+
+    COMPREPLY=( $(compgen -W "${templates}" -- ${cur}) )
+    return 0
+}
+
+complete -F _marek marek

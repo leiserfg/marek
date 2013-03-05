@@ -1,0 +1,5 @@
+{{deb_name}} (0.0.1) oneiric; urgency=low
+
+  * Init
+
+ -- {{deb_maintainer}} <{{deb_email}}>  {{deb_now}}
