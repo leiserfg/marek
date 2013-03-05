@@ -23,9 +23,6 @@ it is assumed that you are confident with jinja2 syntax. If this is not true, pl
 
 After the package is deployed on Linux box as a Debian package, the following CLI features become available.
 
-There are two templates by default: *simple_deb* and *simple_pydeb*. The first one contains only debian directory. The
-second one contains debian directory and simple empty python package together with python **setup.py** file.
-
 Lets list these templates in order to make sure that they are available.
 
 ::
