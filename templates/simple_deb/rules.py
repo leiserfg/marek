@@ -16,7 +16,7 @@ data = {
    "deb_name": get_input("Debian package name", project.name, debianize),
    "deb_maintainer": get_input("Debian maintainer", os.environ.get("DEBFULLNAME", None)),
    "deb_email": get_input("Debian email", os.environ.get("DEBEMAIL", None)),
-   "deb_description": get_input("Debian description"),
+   "deb_description": get_input("Debian description", "Debian package for %s" % project.name),
    "deb_now": now_t,
    "gitignore": ".gitignore"
 }
