@@ -246,7 +246,7 @@ def load_chain_rules(tpl_name, project_name, quiet):
     data = getattr(rules, "data", {})
     file_name = getattr(rules, "file_name", None)
     scripts = list(getattr(rules, "postclone_scripts", []))
-    if not getattr(rules, "extend", False):
+    if rules and not getattr(rules, "extend", False):
         return rules
     if exists(tpl_file):
         with open(tpl_file) as fil:
